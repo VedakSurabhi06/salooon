@@ -6,12 +6,12 @@ const Footer = () => {
           <div class="copyright">
             &copy; Copyright{' '}
             <strong>
-              <span>Saloon</span>
+              <span>Love Your Hair</span>
             </strong>
             . All Rights Reserved
           </div>
           <div class="credits">
-            Designed by <a href="https://bootstrapmade.com/">Saloon</a>
+            Designed by <a href="https://bootstrapmade.com/">Love Your Hair</a>
           </div>
         </div>
         <div class="social-links text-center text-md-right pt-3 pt-md-0">
