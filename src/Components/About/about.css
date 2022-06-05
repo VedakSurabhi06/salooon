@@ -1,0 +1,30 @@
+.about-main {
+  /* width: 80vh; */
+  margin: 0 auto;
+  padding-bottom: 10vh;
+}
+.about-one {
+  height: 50vh;
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: -10;
+  margin-bottom: 50px;
+}
+.about-two {
+  margin: 0 auto;
+  width: 45vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about-img img {
+  height: 350px;
+  width: 45vw;
+  margin-top: -25vh;
+  margin-bottom: 50px;
+  z-index: 10;
+}

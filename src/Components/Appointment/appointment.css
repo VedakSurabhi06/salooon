@@ -1,0 +1,23 @@
+.appointment-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.appointment-main p {
+  color: tomato;
+}
+
+.appointment-main label {
+  margin-top: 10px;
+}
+
+.appointment-main input {
+  height: 40px;
+  width: 300px;
+}
+
+.add {
+  margin-top: 20px;
+}

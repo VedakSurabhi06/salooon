@@ -94,3 +94,59 @@ hr {
   font-size: 18px;
   font-weight: 600;
 }
+
+.service-main {
+  display: flex;
+  width: 80vw;
+  margin: 0 auto;
+  height: 70vh;
+  align-items: center;
+}
+
+.service-image {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.service-image img {
+  height: 300px;
+}
+.service-content {
+  padding-left: 30px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.service-desc {
+  width: 80vw;
+  margin: 0 auto;
+}
+.service-desc h1 {
+  font-size: 25px;
+}
+
+.desc-title {
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+}
+
+.desc {
+  height: 250px;
+  border: 1px solid black;
+}
+.desc h5 {
+  padding: 10px;
+  margin: 0;
+  color: tomato;
+  border-bottom: 3px solid tomato;
+}
+
+/* hr {
+  margin: 0 auto;
+  border: 2px solid #f0eded;
+  width: 80vw;
+} */

@@ -27,9 +27,16 @@ const ServiceItem = ({ service }) => {
         </div>
         <hr />
         {service.descShort} <br />
-        <Link to={'/' + service.title.replace(' ', '-')}>
-          <span className="more">More Details </span>
-        </Link>
+        <span
+          onClick={() =>
+            navigate('/service/' + service.title.replace(' ', '-'), {
+              state: service,
+            })
+          }
+          className="more"
+        >
+          More Details
+        </span>
       </div>
       <div className="button">
         <button
