@@ -1,0 +1,31 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0px 20px;
+}
+
+ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
+  margin: 5px 20px;
+  cursor: pointer;
+}
+
+.signUp {
+  padding: 10px 30px;
+  border-radius: 9999px;
+  background: black;
+  color: white;
+}

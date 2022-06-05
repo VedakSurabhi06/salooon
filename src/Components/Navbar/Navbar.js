@@ -1,47 +1,56 @@
-import { Link } from 'react-router-dom';
-
+import { Link, NavLink } from 'react-router-dom';
+import './navbar.css';
 const Navbar = () => {
+  const activeStyle = {
+    borderBottom: '2px solid black',
+    color: 'black',
+  };
   return (
-    <header id="header">
-      <div className="d-flex align-items-center">
-        <h1 className="logo me-auto">
-          <a href="index.html">Love Your Hair</a>
-        </h1>
-        <a href="index.html" className="logo me-auto">
-          <img src="assets/img/logo.png" alt="" className="img-fluid" />
-        </a>
-
-        <nav id="navbar" className="navbar order-last order-lg-0">
-          <ul>
-            <li>
-              <Link className="nav-link scrollto" to="/">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link className="nav-link scrollto" to="/service">
-                Services
-              </Link>
-            </li>
-            <li>
-              <Link className="nav-link scrollto" to="/about">
-                About
-              </Link>
-            </li>
-            {/* <li>
-              <Link className="nav-link scrollto" to="/appointment">
-                Appointment
-              </Link>
-            </li> */}
-          </ul>
-          <i className="bi bi-list mobile-nav-toggle"></i>
-        </nav>
-
-        <Link to="/register" className="appointment-btn scrollto">
-          <span className="d-none d-md-inline"></span> SIGNUP
-        </Link>
+    <nav>
+      <div className="logo">
+        <h1>Love Your Hair</h1>
       </div>
-    </header>
+      <div className="nav-items">
+        <ul>
+          <li>
+            <NavLink
+              className="link"
+              to="/"
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            >
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/service"
+              className="link"
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            >
+              Services
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/about"
+              className="link"
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            >
+              About
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/register"
+              className="link signUp"
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            >
+              SignUp
+            </NavLink>
+          </li>
+        </ul>
+      </div>
+    </nav>
   );
 };
 export default Navbar;

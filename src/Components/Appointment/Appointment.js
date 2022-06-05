@@ -12,6 +12,7 @@ import './appointment.css';
 
 const Appointment = () => {
   const location = useLocation();
+  console.log(location);
   const service = location.state;
   const [name, setName] = useState('');
   const [date, setDate] = useState('');
@@ -20,9 +21,9 @@ const Appointment = () => {
   const [isSubmit, setIsSubmit] = useState(false);
   const [serviceType, setServiceType] = useState(service.title);
   const [payment, setPayment] = useState(false);
-
   const validate = () => {
     let errors = {};
+
     if (!name) {
       errors.nameError = 'Please enter your name';
     }

@@ -17,6 +17,9 @@ const Payment = ({ setPayment, appointment }) => {
 
   const validate = () => {
     let errors = {};
+    errors = {
+      nameError: 'xdgdhhdh',
+    };
     if (!name) {
       errors.nameError = 'Please enter your name';
     }
@@ -46,7 +49,7 @@ const Payment = ({ setPayment, appointment }) => {
       }, 3000);
     }
   };
-  console.log(appointment);
+
   return (
     <>
       <div className="back">

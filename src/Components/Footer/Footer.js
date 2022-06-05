@@ -1,35 +1,40 @@
+import { Link } from 'react-router-dom';
+import './footer.css';
+
 const Footer = () => {
   return (
-    <footer id="footer">
-      <div class="d-md-flex py-4">
-        <div class="me-md-auto text-center text-md-start">
-          <div class="copyright">
-            &copy; Copyright{' '}
-            <strong>
-              <span>Love Your Hair</span>
-            </strong>
-            . All Rights Reserved
-          </div>
-          <div class="credits">
-            Designed by <a href="https://bootstrapmade.com/">Love Your Hair</a>
-          </div>
+    <footer class="site-footer">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">
+            Copyright &copy;All Rights Reserved by
+            <a href="#">Love Your Hair</a>.
+          </p>
         </div>
-        <div class="social-links text-center text-md-right pt-3 pt-md-0">
-          <a href="#" class="twitter">
-            <i class="fa fa-twitter"></i>
-          </a>
-          <a href="#" class="facebook">
-            <i class="fa fa-facebook"></i>
-          </a>
-          <a href="#" class="instagram">
-            <i class="fa fa-instagram"></i>
-          </a>
-          <a href="#" class="google-plus">
-            <i class="fa fa-skype"></i>
-          </a>
-          <a href="#" class="linkedin">
-            <i class="fa fa-linkedin"></i>
-          </a>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li>
+              <Link class="linkedin" to="/">
+                <i class="fa fa-facebook"></i>
+              </Link>
+            </li>
+            <li>
+              <Link class="linkedin" to="/">
+                <i class="fa fa-twitter"></i>
+              </Link>
+            </li>
+            <li>
+              <Link class="linkedin" to="/">
+                <i class="fa fa-dribbble"></i>
+              </Link>
+            </li>
+            <li>
+              <Link class="linkedin" to="/">
+                <i class="fa fa-linkedin"></i>
+              </Link>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>

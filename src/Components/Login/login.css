@@ -1,5 +1,11 @@
+.login-main {
+  background: lightskyblue;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
 .login {
-  height: calc(100vh - 50px);
+  /* height: calc(100vh - 50px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,7 +15,15 @@
       rgba(255, 255, 255, 0.5)
     ),
     url('https://images.pexels.com/photos/7280128/pexels-photo-7280128.jpeg?cs=srgb&dl=pexels-wencheng-jiang-7280128.jpg&fm=jpg');
-  background-size: cover;
+  background-size: cover; */
+  margin: 0 auto;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: max-content;
+  padding: 20px;
+  width: 30vw;
 }
 
 .loginTitle {
@@ -23,14 +37,13 @@
 }
 
 .loginForm > label {
-  margin: 10px;
+  margin-bottom: 5px;
 }
 
 .loginInput {
   padding: 10px;
   background-color: white;
-  border: none;
-  border-radius: 10px;
+  border: 1px solid black;
 }
 
 .loginInput:focus {

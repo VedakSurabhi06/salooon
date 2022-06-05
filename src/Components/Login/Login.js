@@ -1,46 +1,51 @@
-import React, { useState } from 'react';
+import './login.css';
 import { Link } from 'react-router-dom';
-import '../../App.css';
 import { users } from '../../utils/users';
-const Register = () => {
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
   const [formError, setFormError] = useState('');
-  const [success, setSuccess] = useState(false);
 
-  const handleRegister = e => {
-    setSuccess(false);
+  const handleLogin = e => {
     e.preventDefault();
+    // for (let i = 0; i <= users.length; i++) {
+    //   if (users[i].email === email && users[i].password === password) {
+    //     navigate('/');
+    //   }
+    // }
     if (!email || !password) {
       setFormError('Please enter valid details');
       return;
     } else {
       setFormError('');
     }
-    users.push({
-      email,
-      password,
+    users.map(user => {
+      if (user.email === email && user.password === password) {
+        navigate('/');
+      } else {
+        setFormError('Please enter valid Details');
+      }
     });
-    setSuccess(true);
   };
 
   return (
-    <div>
+    <div className="login-main">
       <div className="login">
-        {success && (
-          <p style={{ color: 'green' }}>{'New user successfully created'}</p>
-        )}
-        <span className="loginTitle">Register</span>
+        <span className="loginTitle">Login</span>
         <p style={{ color: 'red' }}>{formError}</p>
         <form className="loginForm">
           <label>Email</label>
           <input
+            className="loginInput"
+            type="text"
             value={email}
             onChange={e => setEmail(e.target.value)}
-            className="loginInput"
-            type="email"
             placeholder="Enter your email..."
           />
+
           <label>Password</label>
           <input
             className="loginInput"
@@ -49,15 +54,16 @@ const Register = () => {
             type="password"
             placeholder="Enter your password..."
           />
-          <button className="loginButton" onClick={handleRegister}>
-            Register
+
+          <button className="loginButton" onClick={handleLogin}>
+            Login
           </button>
         </form>
-        <span>Already have an account?</span>
-        <Link to="/login">Login</Link>
+        <span>Dont have an Account?</span>
+        <Link to="/register">Register</Link>
       </div>
     </div>
   );
 };
 
-export default Register;
+export default Login;

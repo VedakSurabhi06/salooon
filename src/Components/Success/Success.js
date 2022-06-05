@@ -3,7 +3,7 @@ import './success.css';
 const Success = () => {
   const location = useLocation();
   const appointment = location.state;
-  console.log(appointment);
+
   return (
     <div className="success-main">
       <div className="success-content">
@@ -13,7 +13,7 @@ const Success = () => {
           {Math.floor(Math.random() * (100000000 - 10000000 + 1) + 1)}
         </p>
         <p>
-          Your appointment is successfully scheduled at {appointment.time} on{' '}
+          Your appointment is successfully scheduled at {appointment.time} on
           {appointment.date} for {appointment.serviceType}
         </p>
         <div className="gif">
