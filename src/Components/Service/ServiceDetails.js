@@ -1,8 +1,9 @@
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const ServiceDetails = () => {
   const location = useLocation();
   const service = location.state;
+  const navigate = useNavigate();
   console.log(service);
 
   return (
@@ -40,7 +41,12 @@ const ServiceDetails = () => {
           </div>
           <span style={{ color: 'gray' }}>Price inclusive of all taxes</span>
           <div className="button">
-            <button className="add">Make Appointment</button>
+            <button onClick={() =>
+            navigate('/' + service.title.replace(' ', '-') + '/appointment', {
+              state: service,
+            })
+          }
+            className="add">Make Appointment</button>
           </div>
         </div>
       </div>
